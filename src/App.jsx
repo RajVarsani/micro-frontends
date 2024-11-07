@@ -16,8 +16,10 @@ const App = () => {
   const ActiveComponent = UIComponentMapper[activeTab];
 
   return (
-    <div className="flex flex-col max-w-6xl gap-12 mx-auto mt-10">
-      <div className="text-4xl font-semibold text-slate-900">Welcome to Micro Frontends</div>
+    <div className="flex flex-col max-w-6xl gap-12 px-6 mx-auto mt-10">
+      <div className="text-4xl font-semibold text-slate-900">
+        Welcome to Micro Frontends
+      </div>
 
       <div className="flex flex-col gap-6">
         <div className="flex gap-3">
