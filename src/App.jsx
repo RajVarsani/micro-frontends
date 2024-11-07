@@ -1,21 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Home from "home/app";
 import Dashboard from "dashboard/app";
 
 import "./index.scss";
 
-const App = () => (
-  <div className="max-w-6xl mx-auto mt-10 text-3xl">
-    <div>Name: micro-frontends</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Tailwind</div>
+const UIComponentMapper = {
+  home: Home,
+  dashboard: Dashboard,
+};
 
-    <Home />
-    <Dashboard />
-  </div>
-);
+const App = () => {
+  const [activeTab, setActiveTab] = useState("home");
+
+  const ActiveComponent = UIComponentMapper[activeTab];
+
+  return (
+    <div className="flex flex-col max-w-6xl gap-12 mx-auto mt-10">
+      <div className="text-4xl text-slate-900">Welcome to Micro Frontends</div>
+
+      <div className="flex flex-col gap-6">
+        <div className="flex gap-4">
+          {Object.keys(UIComponentMapper).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded-xl ${
+                activeTab === tab
+                  ? "bg-slate-700 text-white"
+                  : "bg-slate-200 text-slate-700"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <div className="p-8 rounded-xl bg-slate-100">
+          <ActiveComponent />
+        </div>
+      </div>
+    </div>
+  );
+};
 const rootElement = document.getElementById("app");
 if (!rootElement) throw new Error("Failed to find the root element");
 

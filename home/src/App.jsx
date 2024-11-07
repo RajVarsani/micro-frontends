@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 
 const App = () => (
-  <div className="max-w-6xl mx-auto mt-10 text-3xl">
+  <div className="max-w-6xl mx-auto text-3xl">
     <div>Name: home</div>
     <div>Framework: react</div>
     <div>Language: JavaScript</div>
