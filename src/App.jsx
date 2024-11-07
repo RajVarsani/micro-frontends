@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import Home from "home/app";
+import Home from "home/app";
 import Dashboard from "dashboard/app";
 
 import "./index.css";
@@ -11,7 +11,7 @@ const App = () => (
     <div>Framework: react</div>
     <div>Language: JavaScript</div>
     <div>CSS: Empty CSS</div>
-    {/* <Home /> */}
+    <Home />
     <Dashboard />
   </div>
 );
