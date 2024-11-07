@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import Home from "home/app";
+import Home from "home";
 import Dashboard from "dashboard/app";
 
 import "./index.scss";

@@ -66,7 +66,7 @@ module.exports = (_, argv) => ({
       filename: "remoteEntry.js",
       remotes: {},
       exposes: {
-        "./app": "./src/App.jsx",
+        ".": "./src/App.jsx",
       },
       shared: {
         ...deps,
