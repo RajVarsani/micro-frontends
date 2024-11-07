@@ -18,4 +18,4 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(<App />);
 
-export default Home;
+export default App;
