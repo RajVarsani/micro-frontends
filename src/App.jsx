@@ -3,14 +3,15 @@ import ReactDOM from "react-dom/client";
 import Home from "home/app";
 import Dashboard from "dashboard/app";
 
-import "./index.css";
+import "./index.scss";
 
 const App = () => (
-  <div className="container">
+  <div className="max-w-6xl mx-auto mt-10 text-3xl">
     <div>Name: micro-frontends</div>
     <div>Framework: react</div>
     <div>Language: JavaScript</div>
-    <div>CSS: Empty CSS</div>
+    <div>CSS: Tailwind</div>
+
     <Home />
     <Dashboard />
   </div>
