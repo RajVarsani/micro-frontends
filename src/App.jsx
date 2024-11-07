@@ -17,15 +17,15 @@ const App = () => {
 
   return (
     <div className="flex flex-col max-w-6xl gap-12 mx-auto mt-10">
-      <div className="text-4xl text-slate-900">Welcome to Micro Frontends</div>
+      <div className="text-4xl font-semibold text-slate-900">Welcome to Micro Frontends</div>
 
       <div className="flex flex-col gap-6">
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           {Object.keys(UIComponentMapper).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 rounded-xl ${
+              className={`px-4 py-2 rounded-xl capitalize ${
                 activeTab === tab
                   ? "bg-slate-700 text-white"
                   : "bg-slate-200 text-slate-700"
